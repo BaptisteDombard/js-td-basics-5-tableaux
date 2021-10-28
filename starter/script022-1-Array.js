@@ -155,7 +155,7 @@ let aFruit = ["pomme", "banane", "poire", "pêche", "orange"];
 aFruit.unshift("fraise");
 aFruit.push("myrtille");
 console.log(aFruit);
-// console.log(`La poire est mon fruit n°${aFruit.indexOf(3)}.`)
+console.log(`La poire est mon fruit n°${aFruit.indexOf("poire")}.`)
 
 
 
