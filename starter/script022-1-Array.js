@@ -17,7 +17,7 @@ TABLEAU (ARRAY) :
 // 1. Initialiser un nouveau tableau
 
 // 1°) Première méthode : déclaration littérale
-var names = ['John', 'Mark', 'Jane'];
+let names = ['John', 'Mark', 'Jane'];
 /*
 - Un tableau indicé est un conteneur qui contient plusieurs données à la fois
 - Chaque donnée est associée à un indice qui représente la place de la donnée dans le tableau
@@ -36,15 +36,15 @@ EXERCICE 1 :
 - créer un tableau semaine qui contient les noms des jours de la semaine
 - afficher ce tableau dans la console
 */
-
-
+const aSemaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+console.log(aSemaine);
 // N.B. La fonction console.table() est très intéressante à utiliser pour affciher un tableau
 
 
 
 // 2. Accéder à un élément du tableau : l'opérateur d'accession : les "[]"
 console.log(names[2]); // affiche le 3e élément du tableau, ici 'Jane'
-/* 
+/*
 L'opérateur pour accéder à un élément d'un tableau est le crochet :
 - si on veut accéder au 1er élément du tableau, on écrit nom_du_tableau[0]
 - si on veut accéder au 2e élément du tableau, on écrit nom_du_tableau[1]
@@ -53,30 +53,33 @@ L'opérateur pour accéder à un élément d'un tableau est le crochet :
 	on écrit nom_du_tableau[(nombre d'éléments dans le tableau) - 1]
 */
 
-/* 
+/*
 EXERCCICE 2 : afficher dans la console
 	- "Le premier jour de la semaine est …" (où … est le nom du jour récupéré dans le tableau)
 	- "Le dernier jour de la semaine est…" (où … est le nom du jour récupéré dans le tableau)
  */
  // lundi
 // dimanche
+console.log(`Le premier jour de la semaine est ${aSemaine[0]}`)
+console.log(`Le dernier jour de la semaine est ${aSemaine[6]}`)
 
 
 // 3. Nombre d'éléments dans un tableau : la propriété "length" du tableau
 console.log(names.length);  // affiche la longueur du tableau, c.-à-d. le nombre d'éléments du tableau, ici 3
-/* 
+/*
 Un tableau est un objet de type Array (cf js-td-basics-6-objets).
 On peut connaître le nombre d'éléments dans le tableau en utilisant
 la propriété "length" du tableau, comme ceci :
 	nom_du_tableau.length
 */
 
-/* 
+/*
 EXERCICE 3 :
 - afficher le nombre de jours dans une semaine
 - afficher le dernier jour de la semaine
 */
-
+console.log(aSemaine.length);
+console.log(aSemaine[6]);
 
 
 
@@ -93,15 +96,18 @@ EXERCICE 4 :
 - afficher le contenu de cette variable dans la console
 - ajouter un nouveau jour, dimanche2, à la fin de la semaine
 - réafficher le tableau des jours de la semaine
-*/ 
+*/
 
-
+aSemaine[5] = "saturday";
+console.log(aSemaine);
+const jourFerie = aSemaine[6];
+console.log(jourFerie);
 
 
 // 5. Un tableau peut contenir des données de différents types
-var john = ['John', 'Smith', 1990, 'designer', false];
+let john = ['John', 'Smith', 1990, 'designer', false];
 // 	Un tableau peut même contenir un tableau
-var mark = ['Mark', 'Smith', 1990, 'designer', ['John', 'Mary'], true];
+let mark = ['Mark', 'Smith', 1990, 'designer', ['John', 'Mary'], true];
 
 
 // 6. Méthodes associées à un tableau 
@@ -120,12 +126,12 @@ console.log(john);
 console.log(john.indexOf(23));
 
 // 4°) Méthode pour inverser l'ordre des données dans un tableau
-var tab = [0,1,2,3,4];
+let tab = [0,1,2,3,4];
 tab.reverse(); // inverse l'ordre du tableau
 console.log(tab); 
 
 // 7. Manière classique de tester si une donnée se trouve dans un tableau
-var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+let isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
 console.log(isDesigner);
 
 /*
@@ -145,6 +151,11 @@ EXERCICE 5 :
 - réafficher le tableau
 */
 
+let aFruit = ["pomme", "banane", "poire", "pêche", "orange"];
+aFruit.unshift("fraise");
+aFruit.push("myrtille");
+console.log(aFruit);
+// console.log(`La poire est mon fruit n°${aFruit.indexOf(3)}.`)
 
 
 
@@ -156,18 +167,17 @@ EXERCICE 5 :
 
 
 
-
-// 1. Initialiser un nouveau tableau (… petit retour en arrière pour compléter…)
+/*// 1. Initialiser un nouveau tableau (… petit retour en arrière pour compléter…)
 
 // 2°) Deuxième méthode pour initialiser un tableau : new Array()
-var years = new Array(1990, 1969, 1948);
+let years = new Array(1990, 1969, 1948);
 // OU
-var years = new Array(); // étape 1 : on déclare un tableau vide
+let years = new Array(); // étape 1 : on déclare un tableau vide
 years[0]=1990; // étape 2 : on le remplit une case à la fois
 years[1]=1969;
 years[2]=1948;
 
-console.log(years);
+console.log(years);*/
 
 
 
