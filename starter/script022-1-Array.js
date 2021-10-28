@@ -36,11 +36,18 @@ EXERCICE 1 :
 - créer un tableau semaine qui contient les noms des jours de la semaine
 - afficher ce tableau dans la console
 */
-const aSemaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
+const aSemaine = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"];
 console.log(aSemaine);
+const jour = function jour(elem) {
+    console.log(elem);
+}
+/*function jour(elem) {
+    console.log(elem);
+}*/
+aSemaine.forEach(jour);
 // N.B. La fonction console.table() est très intéressante à utiliser pour affciher un tableau
 
-
+console.table(aSemaine);
 
 // 2. Accéder à un élément du tableau : l'opérateur d'accession : les "[]"
 console.log(names[2]); // affiche le 3e élément du tableau, ici 'Jane'
@@ -60,8 +67,10 @@ EXERCCICE 2 : afficher dans la console
  */
  // lundi
 // dimanche
-console.log(`Le premier jour de la semaine est ${aSemaine[0]}`)
-console.log(`Le dernier jour de la semaine est ${aSemaine[6]}`)
+if (aSemaine.length>=1){
+    console.log(`Le premier jour de la semaine est ${aSemaine[0]}`);
+    console.log(`Le dernier jour de la semaine est ${aSemaine[aSemaine.length-1]}`);
+}
 
 
 // 3. Nombre d'éléments dans un tableau : la propriété "length" du tableau
@@ -79,7 +88,7 @@ EXERCICE 3 :
 - afficher le dernier jour de la semaine
 */
 console.log(aSemaine.length);
-console.log(aSemaine[6]);
+console.log(aSemaine[aSemaine.length-1]);
 
 
 
@@ -100,8 +109,11 @@ EXERCICE 4 :
 
 aSemaine[5] = "saturday";
 console.log(aSemaine);
-const jourFerie = aSemaine[6];
+const jourFerie = aSemaine[aSemaine.length-1];
 console.log(jourFerie);
+aSemaine.push("dimanche2");
+aSemaine[aSemaine.length]="dimanche3";
+console.table(aSemaine)
 
 
 // 5. Un tableau peut contenir des données de différents types
@@ -151,12 +163,16 @@ EXERCICE 5 :
 - réafficher le tableau
 */
 
-let aFruit = ["pomme", "banane", "poire", "pêche", "orange"];
+const aFruit = ["pomme", "banane", "poire", "pêche", "orange"];
 aFruit.unshift("fraise");
 aFruit.push("myrtille");
-console.log(aFruit);
-console.log(`La poire est mon fruit n°${aFruit.indexOf("poire")}.`)
-
+// console.log(aFruit);
+// console.log(`La poire est mon fruit n°4, il porte l'indice ${aFruit.indexOf("poire")}.`);
+aFruit.reverse();
+console.log(`Mon tableau inversé : ${aFruit}`)
+const isMangue = aFruit.indexOf(`mangue`) === -1 ? "mangue n'est pas dans le tableau" : "mangue est dans le tableau";
+aFruit.pop();
+console.log(isMangue);
 
 
 
