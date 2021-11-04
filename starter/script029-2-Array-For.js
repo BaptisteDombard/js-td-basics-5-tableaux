@@ -24,16 +24,22 @@ EXERCICE 1 :
 	2°) avec une boucle while
 	3°) avec une boucle for of
 */
-
+// const aFilm = ["Forrest Gump","Bohemian Rhapsody","Le Seigneur des anneaux","Harry Potter"];
 
 
 // Boucle FOR
-
+/*for (let i = 0;i<aFilm.length; i++){
+    console.log(aFilm[i]);
+}*/
 
 
 
 // Boucle WHILE
-
+// let i = -1;
+// while (i+1<aFilm.length){
+//     i++;
+//     console.log(aFilm[i]);
+// }
 
 
 
@@ -47,8 +53,9 @@ for (const element of tableau) {
 Elle a l'avantage de ne pas nécessiter la gestion d'un compteur de boucle.
 */
 
-
-
+// for (const elem of aFilm){
+//     console.log(elem);
+// }
 
 
 /*
@@ -59,19 +66,29 @@ EXERCICE 2 :
 	2°) avec une boucle while
 	3°) avec une boucle for of
 */ 
-
+const aJohn = ["John","Smith",1990,"designer",false,"blue"];
 // Boucle FOR
 
+// for (let i =0;i<aJohn.length;i++){
+//     console.log(aJohn[i]);
+// }
 
 
 // Boucle WHILE
 
+// let i = -1;
+// while (i+1<aJohn.length){
+//     i++;
+//     console.log(aJohn[i]);
+// }
 
 
 
 // Boucle FOR OF
 
-
+for (const elem of aJohn){
+    console.log(elem);
+}
 
 
 /*
