@@ -24,7 +24,7 @@ EXERCICE 1 :
 	2°) avec une boucle while
 	3°) avec une boucle for of
 */
-// const aFilm = ["Forrest Gump","Bohemian Rhapsody","Le Seigneur des anneaux","Harry Potter"];
+const aFilm = ["Forrest Gump","Bohemian Rhapsody","Le Seigneur des anneaux","Harry Potter"];
 
 
 // Boucle FOR
@@ -101,8 +101,13 @@ EXERCICE 3 :
 - afficher "Voici mon tableau de carrés :" et le tableau contentant les carrés
 */
 
-
-
+const nombre = [1,2,3,4,5];
+console.log(`Voici mon tableau de nombres : ${nombre}`);
+let carrres = [];
+for (i=0;i<nombre.length;i++){
+    carrres.push(nombre[i]*nombre[i]);
+}
+console.log(`Voici mon tableau de carrés : ${carrres}`);
 
 
 
@@ -127,7 +132,9 @@ Utiliser la méthode forEach pour
 
 
 // première écriture
-
+aFilm.forEach(function() {
+    console.log(aFilm)
+})
 
 
 // écriture ES6
